@@ -25,6 +25,8 @@ export interface IDinamic {
     | 'default'
     | 'dashed'
     | undefined;
+
+  htmlType: 'submit' | 'button' | 'reset';
 }
 
 const DinamicFields: React.FC<IDinamic> = (props) => {
@@ -38,7 +40,7 @@ const DinamicFields: React.FC<IDinamic> = (props) => {
           offset: props.offset,
         }}
       >
-        <Button type={props.type} htmlType='submit'>
+        <Button type={props.type} htmlType={props.htmlType}>
           Submit
         </Button>
       </Form.Item>

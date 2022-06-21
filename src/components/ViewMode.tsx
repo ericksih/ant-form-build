@@ -9,9 +9,7 @@ export interface IViewMode {
       key: string;
       label: string;
       colSpan?: number;
-      viewWidget?: (
-        value: string
-      ) => React.ReactElement | string | number | React.ReactNode;
+      viewWidget?: (value: string) => React.ReactElement;
     }[];
   };
 
