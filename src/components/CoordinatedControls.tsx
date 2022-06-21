@@ -15,27 +15,9 @@ export interface ICoordinatedControls {
 }
 
 const CoordinatedControls: React.FC<ICoordinatedControls> = (props) => {
-  const [form] = Form.useForm();
   const handleFinish = useCallback((values: any) => {
     console.log('Submit: ', values);
   }, []);
-
-  const meta = [
-    {
-      key: 'name',
-      label: 'Name',
-      widget: 'text',
-      options: ['Male', 'Female'],
-      onChange: (evt: any) => {
-        if (evt.target.value === 'Male') {
-          form.setFieldsValue({ note: 'Hi, man!' });
-        } else {
-          form.setFieldsValue({ note: 'Hi, lady!' });
-        }
-      },
-    },
-    { key: 'note', label: 'Note' },
-  ];
 
   return (
     <Form

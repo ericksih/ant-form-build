@@ -11,7 +11,7 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route path='/' element={<SimplePage />} />
-        <Route path='view' element={<ViewModePage />} />
+        <Route path='/view' element={<ViewModePage />} />
         <Route path='/dinamic' element={<DinamicFieldsPage />} />
         <Route path='/coordinated' element={<CoordinatedPage />} />
       </Routes>
